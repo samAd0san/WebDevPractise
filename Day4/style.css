@@ -1,3 +1,31 @@
+
+/* Selector */
 h1 {
     background-color: yellow;
+    width: 200px;
+    height: 200px;
+}
+
+/* This is a selector */
+p {
+    color: goldenrod;
+}
+
+/* This is a class, It is reusable */
+.A {
+    text-align: center;
+    color: black;
+    background-color: grey;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.A{
+    font-size: 22px;
+}
+
+/* This is an id, It should be unique in html doc */
+#unique{
+    background-color: antiquewhite;
 }
