@@ -5,16 +5,8 @@ body{
 .newlayout {
     display: flex;
     flex-direction: row;
-}
-
-.first {
-    /* The first element will not shrink */
-    flex-shrink: 0;
-}
-
-.second {
-    /* The items will override as we collapse the o/p display bar */
-    flex-shrink: 0;
+    flex-wrap: wrap; /*This will overflow the elements to the next row if 
+    it does not fits in the box and vise-versa if flex-direction is coloumn*/
 }
 
 .newlayout div {
@@ -24,7 +16,7 @@ body{
     1. If flex-direction is row, flex-basis becomes the length
     2. If flex-direction is coloumn, flex-basis becomes the height */
 
-
+    flex-shrink: 0;
 
     border: 1px solid black;
     margin: 10px;
