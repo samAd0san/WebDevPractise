@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+}
+
+#parent {
+    display: flex;
+    background: red;
+    width: 100vw;
+    height: 100vh;
+
+    /*We can have 9 combinations regarding the placement of the element
+       justify-content  align-items
+    1. flex-start flex-start 
+    2. center flex-start
+    3. flex-end flex start 
+    4. flex-end center 
+    5. flex-end flex-end
+    6. center flex-end 
+    7. flex-start flex-end
+    8. flex-start center 
+    9. center center  */
+
+    justify-content: center; /* row */
+    align-items: center; /* coloumn */
+ }
+
+#child {
+    background: yellow;
+    width: 200px;
+    height: 200px;
+}
