@@ -1,0 +1,32 @@
+body{
+    background: pink
+}
+
+.newlayout {
+    display: flex;
+    flex-direction: row;
+}
+
+.first {
+    /* The first element will not shrink */
+    flex-shrink: 0;
+}
+
+.second {
+    /* The items will override as we collapse the o/p display bar */
+    flex-shrink: 0;
+}
+
+.newlayout div {
+    background: red;
+    width: 200px;
+    flex-basis: 200px; /*It defines the length of the item in the direction of main axis
+    1. If flex-direction is row, flex-basis becomes the length
+    2. If flex-direction is coloumn, flex-basis becomes the height */
+
+
+
+    border: 1px solid black;
+    margin: 10px;
+    height: 50px;
+}
