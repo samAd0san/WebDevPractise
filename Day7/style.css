@@ -1,0 +1,49 @@
+/* CREATING A GOOGLE LIKE INTERFACE */
+
+* {
+    margin: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav, footer {
+    flex-shrink: 0;
+}
+
+section {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+nav ul li {
+
+    padding: 10px;
+    margin: 2px;
+    list-style: none;
+}
+
+#logo {
+    width: 80vw;
+    height: 200px;
+    background: rgb(226, 12, 12);
+}
+
+.layer {
+
+    border-bottom: 2px solid gray;
+    padding: 10px;
+    background: rgb(170, 168, 168);
+    width: 100%;
+}
