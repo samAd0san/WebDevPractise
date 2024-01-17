@@ -2,13 +2,18 @@
 /* Selector */
 h1 {
     background-color: yellow;
+    /* convert the block element to inline element*/
+    display: inline;
     width: 200px;
     height: 200px;
 }
 
-/* This is a selector */
-p {
+/* This is a class*/
+.pa {
     color: goldenrod;
+    /* convert the inline element to block element*/
+    display: block;
+    background-color: antiquewhite;
 }
 
 /* This is a class, It is reusable */
