@@ -1,27 +1,32 @@
  
+/* Adding background color green and margin to the body of the page */
 body {
     background-color: rgb(186, 237, 186);
     margin: 20%;
 }
 
+/* Modifing the title 'A.P.J Abdul Kalam' in the center, applying shadow and increasing the font size to 7vh */
 #title {
     text-align: center;
     text-shadow: 2px 2px 4px black;
     font-size: 7vh;
 }
 
+/* Alliging the image at the center */
 #img {
     text-align: center;
     display: inline-block;
     width: 100%;
 }
 
+/* The Content below the Image is modified */
 #caption {
     font-size: 17px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
 }
 
+/* The main content here is modified which is in the box like interface */
 div#tribute {
     background-color: rgba(37, 124, 75, 0.25);
     box-shadow: 20px 20px 20px #98FB98;
@@ -31,6 +36,7 @@ div#tribute {
     margin-top: 50px; 
 }
 
+/* Modifying the heading 'About the Legend' */
 h1.sub {
     font-size: 35px;
         color: white;
@@ -38,6 +44,7 @@ h1.sub {
         text-shadow: 5px 5px 10px black;
 }
 
+/* In the Last line modifying the 'A.P.J Abdul Kalam font color */
 #tribute-link {
     text-decoration: none;
     color: black;
