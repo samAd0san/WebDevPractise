@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(255, 255, 204);
+    margin: 20%;
+}
+
+div#first {
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#title {
+    font-size: 8vh;
+    color: #8B4513; /* Dark color for better visibility on light yellow background */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+div#first {
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 300px;
+    height: auto;
+}
+
+#cover{
+    font-size: 18px;
+    font-family: Gill Sans;
+    color: black;
+}
+
+div#second {
+    font-size: 18px;
+    /* text-align: center; */
+    /* border: 2px solid #000; */
+    box-shadow: 10px 10px 10px rgba(0.2, 0.2, 0.2, 0.2);
+    font-family: Georgia;
+    padding: 25px 25px;
+    border-radius: 10px;
+    margin: 11px;
+	margin-top: 50px;
+}
+
+.title2 {
+    font-size: 25px;
+    text-align: center;
+    color: Brown;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) ;
+}
+
+#last {
+    text-decoration: none;
+    color: brown;
+}
+
+#name {
+    color: black;
+}
