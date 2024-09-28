@@ -19,6 +19,28 @@ body {
     width: 100px;
 }
 
+#cursor {
+    height: 20px;
+    width: 20px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    transition: all linear 0.1s;
+}
+
+#cursor-blur {
+    height: 300px;
+    width: 300px;
+    background-color: rgba(150, 193, 30, 0.5); /* Increased opacity for a darker effect */
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(80px);
+    z-index: 9;
+    transition: all linear 0.4s;
+    pointer-events: none; /* Prevent interference with mouse events */
+}
+
 #nav {
     width: 100%;
     height: 135px;
@@ -32,9 +54,11 @@ body {
     gap: 60px;
     /* To stick the nav bar permanently */
     position: fixed;
-    z-index: 1000; /* Ensure the nav stays on top of other elements */
-     /* Add text shadow to improve visibility */
-     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* subtle shadow */
+    z-index: 1000;
+    /* Ensure the nav stays on top of other elements */
+    /* Add text shadow to improve visibility */
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    /* subtle shadow */
 }
 
 #nav h4 {
@@ -43,10 +67,12 @@ body {
 }
 
 #main-video {
-    height: 100vh; /* Ensure it covers just the viewport height */
+    height: 100vh;
+    /* Ensure it covers just the viewport height */
     width: 100%;
     object-fit: cover;
-    z-index: -1; /* Ensure it stays behind the scrollable content */
+    z-index: -1;
+    /* Ensure it stays behind the scrollable content */
     position: fixed;
     top: 0;
     left: 0;
@@ -57,7 +83,8 @@ body {
 #main {
     background-color: rgba(0, 0, 0, 0.123);
     position: relative;
-    min-height: 200vh; /* Ensure enough content height for scrolling */
+    min-height: 200vh;
+    /* Ensure enough content height for scrolling */
 }
 
 
@@ -103,4 +130,3 @@ body {
     font-weight: 500;
     width: 40%;
 }
-

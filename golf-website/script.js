@@ -1,3 +1,23 @@
+var crsr = document.querySelector("#cursor");
+var blurr = document.querySelector("#cursor-blur");
+var mouseX = 0;
+var mouseY = 0;
+
+document.addEventListener("mousemove", function (dets) {
+    mouseX = dets.x;
+    mouseY = dets.y;
+});
+
+function animateCursor() {
+    crsr.style.left = mouseX + "px";
+    crsr.style.top = mouseY + "px";
+    blurr.style.left = mouseX - 250 + "px"; // Adjust blur position if needed
+    blurr.style.top = mouseY - 250 + "px"; // Adjust blur position if needed
+    requestAnimationFrame(animateCursor);
+}
+
+animateCursor(); // Start the animation
+
 gsap.to("#nav", {
     backgroundColor: "#000",
     duration: 0.5,
