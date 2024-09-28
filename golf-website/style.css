@@ -8,8 +8,7 @@
     font-style: normal;
 }
 
-html,
-body {
+html, body {
     width: 100%;
     height: 100%;
 }
@@ -32,33 +31,26 @@ body {
 #cursor-blur {
     height: 300px;
     width: 300px;
-    background-color: rgba(150, 193, 30, 0.5); /* Increased opacity for a darker effect */
+    background-color: rgba(150, 193, 30, 0.5);
     border-radius: 50%;
     position: fixed;
     filter: blur(80px);
-    z-index: 9;
+    z-index: 1001;
     transition: all linear 0.4s;
-    pointer-events: none; /* Prevent interference with mouse events */
+    pointer-events: none;
 }
 
 #nav {
     width: 100%;
     height: 135px;
-    /* background-color: darkgoldenrod; */
     display: flex;
-    /* Now to center the elements vertically (y axis) use allign items */
     align-items: center;
-    /* And for the x axis we can it to be at start position i.e left side */
     justify-content: flex-start;
     padding: 0px 120px;
     gap: 60px;
-    /* To stick the nav bar permanently */
     position: fixed;
     z-index: 1000;
-    /* Ensure the nav stays on top of other elements */
-    /* Add text shadow to improve visibility */
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-    /* subtle shadow */
 }
 
 #nav h4 {
@@ -67,37 +59,29 @@ body {
 }
 
 #main-video {
-    height: 100vh;
-    /* Ensure it covers just the viewport height */
+    height: 100vh; /* Restrict video to viewport height */
     width: 100%;
     object-fit: cover;
-    z-index: -1;
-    /* Ensure it stays behind the scrollable content */
-    position: fixed;
+    z-index: -1; /* Stay behind other content */
+    position: absolute; /* Restrict video to the first section only */
     top: 0;
     left: 0;
-    /* Add gradient overlay to darken the video behind the navbar */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%);
 }
 
 #main {
     background-color: rgba(0, 0, 0, 0.123);
     position: relative;
-    min-height: 200vh;
-    /* Ensure enough content height for scrolling */
+    min-height: 100vh; /* Remove extra height to avoid video reappearing */
 }
-
 
 #page1 {
     height: 100vh;
     width: 100%;
     position: relative;
-
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
     text-align: center;
     z-index: 10;
 }
@@ -108,7 +92,6 @@ body {
     position: relative;
 }
 
-/* Adding the stylings to the heading */
 #page1 h1::before {
     content: "EAT. DRINK. PLAY.";
     position: absolute;
@@ -129,4 +112,58 @@ body {
     font-size: 1.2vw;
     font-weight: 500;
     width: 40%;
+}
+
+#page2 {
+    min-height: 100vh; /* Ensure full height for page2 */
+    width: 100%;
+    z-index: 10;
+    position: relative;
+    background-color: #000; /* Set background to ensure video doesn’t show */
+}
+
+#scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+
+#scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4 {
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: gilroy;
+    margin-right: 20px;
+    transition: all linear 0.3s;
+    color: #000;
+    -webkit-text-stroke: 2px #ffffff;
+}
+
+#scroller h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
