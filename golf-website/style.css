@@ -32,6 +32,8 @@ body {
     gap: 60px;
     /* To stick the nav bar permanently */
     position: fixed;
+    z-index: 1000; /* Ensure the nav stays on top of other elements */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Add some background to make the nav visible over the content */
 }
 
 #nav h4 {
@@ -40,18 +42,22 @@ body {
 }
 
 #main-video {
-    height: 100%;
+    height: 100vh; /* Ensure it covers just the viewport height */
     width: 100%;
-    /* To cover the entire screen */
     object-fit: cover;
-    z-index: -1;
+    z-index: -1; /* Ensure it stays behind the scrollable content */
     position: fixed;
+    top: 0;
+    left: 0;
 }
 
 #main {
+    padding-top: 135px; /* To account for the height of the fixed nav */
     background-color: rgba(0, 0, 0, 0.123);
     position: relative;
+    min-height: 200vh; /* Ensure enough content height for scrolling */
 }
+
 
 #page1 {
     height: 100vh;
@@ -95,3 +101,4 @@ body {
     font-weight: 500;
     width: 40%;
 }
+
