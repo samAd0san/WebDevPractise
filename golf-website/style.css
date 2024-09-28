@@ -73,6 +73,17 @@ body {
     position: relative;
 }
 
+/* Adding the stylings to the heading */
+#page1 h1::before {
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: #000;
+    top: -2px;
+    left: -5px;
+    -webkit-text-stroke: 1.5px #95c11e;
+    z-index: -1;
+}
+
 #page1 h2 {
     font-size: 30px;
     font-weight: 800;
