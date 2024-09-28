@@ -33,7 +33,8 @@ body {
     /* To stick the nav bar permanently */
     position: fixed;
     z-index: 1000; /* Ensure the nav stays on top of other elements */
-    background-color: rgba(0, 0, 0, 0.7); /* Optional: Add some background to make the nav visible over the content */
+     /* Add text shadow to improve visibility */
+     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* subtle shadow */
 }
 
 #nav h4 {
@@ -49,10 +50,11 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    /* Add gradient overlay to darken the video behind the navbar */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%);
 }
 
 #main {
-    padding-top: 135px; /* To account for the height of the fixed nav */
     background-color: rgba(0, 0, 0, 0.123);
     position: relative;
     min-height: 200vh; /* Ensure enough content height for scrolling */
