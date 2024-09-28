@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: #fff;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#nav-img{
+    height: 100px;
+    width: 100px;
+}
+
+#nav{
+    width: 100%;
+    height: 135px;
+    background-color: darkgoldenrod;
+    display: flex;
+    /* Now to center the elements vertically (y axis) use allign items */
+    align-items: center;
+    /* And for the x axis we can it to be at start position i.e left side */
+    justify-content: flex-start;
+    padding: 0px 120px;
+    gap: 60px;
+}
+
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
