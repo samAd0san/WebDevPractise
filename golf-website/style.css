@@ -8,7 +8,8 @@
     font-style: normal;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -59,11 +60,14 @@ html, body {
 }
 
 #main-video {
-    height: 100vh; /* Restrict video to viewport height */
+    height: 100vh;
+    /* Restrict video to viewport height */
     width: 100%;
     object-fit: cover;
-    z-index: -1; /* Stay behind other content */
-    position: absolute; /* Restrict video to the first section only */
+    z-index: -1;
+    /* Stay behind other content */
+    position: absolute;
+    /* Restrict video to the first section only */
     top: 0;
     left: 0;
 }
@@ -71,7 +75,8 @@ html, body {
 #main {
     background-color: rgba(0, 0, 0, 0.123);
     position: relative;
-    min-height: 100vh; /* Remove extra height to avoid video reappearing */
+    min-height: 100vh;
+    /* Remove extra height to avoid video reappearing */
 }
 
 #page1 {
@@ -115,11 +120,13 @@ html, body {
 }
 
 #page2 {
-    min-height: 100vh; /* Ensure full height for page2 */
+    min-height: 100vh;
+    /* Ensure full height for page2 */
     width: 100%;
     z-index: 10;
     position: relative;
-    background-color: #000; /* Set background to ensure video doesn’t show */
+    background-color: #000;
+    /* Set background to ensure video doesn’t show */
 }
 
 #scroller {
@@ -163,11 +170,13 @@ html, body {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-100%);
     }
 }
 
+/* About US page stylings */
 #about-us {
     height: 40vh;
     width: 100%;
@@ -178,27 +187,33 @@ html, body {
     position: relative;
     z-index: 10;
     justify-content: space-around;
-  }
-  #about-us img {
+}
+
+#about-us img {
     height: 220px;
     width: 220px;
     border-radius: 20px;
     object-fit: cover;
-  }
-  #about-us-in {
+}
+
+#about-us-in {
     width: 50%;
     text-align: center;
-  }
-  #about-us-in h3 {
+}
+
+#about-us-in h3 {
     font-size: 54px;
     font-weight: 800;
     margin-bottom: 30px;
-  }
-  #about-us-in p {
+}
+
+#about-us-in p {
     font-size: 20px;
     line-height: 26px;
-  }
-  #cards-container {
+}
+
+/* Cards stylings */
+#cards-container {
     /* background-color: red; */
     height: 60vh;
     display: flex;
@@ -207,8 +222,9 @@ html, body {
     gap: 70px;
     position: relative;
     z-index: 10;
-  }
-  .card {
+}
+
+.card {
     height: 80%;
     width: 24%;
     /* background-color: blue; */
@@ -217,40 +233,78 @@ html, body {
     background-position: center;
     overflow: hidden;
     transition: all ease 0.6s;
-  }
-  #card1 {
+}
+
+#card1 {
     background-image: url(./Assests/card1.avif);
-  }
-  #card2 {
+}
+
+#card2 {
     background-image: url(./Assests/card2.webp);
-  }
-  #card3 {
+}
+
+#card3 {
     background-image: url(./Assests/card3.avif);
-  }
-  .overlay {
+}
+
+.overlay {
     height: 100%;
     width: 100%;
     background-color: #95c11e;
     padding: 30px;
     padding-top: 160px;
     opacity: 0;
+    /*To make the text not visible*/
     transition: all ease 0.6s;
-  }
-  .overlay h4 {
+}
+
+.overlay h4 {
     color: #000;
     font-size: 40px;
     text-transform: uppercase;
     white-space: nowrap;
     margin-bottom: 20px;
     font-weight: 800;
-  }
-  .overlay p {
+}
+
+.overlay p {
     color: #000;
     font-size: 18px;
-  }
-  .card:hover .overlay {
+}
+
+.card:hover .overlay {
     opacity: 1;
-  }
-  .card:hover {
+    /*On hovering the text should be visible*/
+}
+
+/* To rotate the card on hover */
+.card:hover {
     transform: rotate3d(-1, 1, 0, 20deg);
-  }
+}
+
+/* Green div styling */
+#green-div {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    background: linear-gradient(to left bottom, #119f3a, #ace022);
+}
+
+#green-div h4 {
+    width: 45%;
+    line-height: 50px;
+    color: #000;
+    text-align: center;
+    font-weight: 800;
+    font-size: 27px;
+    text-transform: uppercase;
+}
+
+#green-div img {
+    height: 100%;
+    object-fit: cover;
+    width: 14%;
+}
+
